@@ -1,7 +1,7 @@
-﻿using FudamentosTestes.Dtos;
-using FudamentosTestes.Entities;
+﻿using FundamentosTestes.Dtos;
+using FundamentosTestes.Entities;
 using MediatR;
 
-namespace FudamentosTestes.Handlers;
+namespace FundamentosTestes.Handlers;
 
 internal record GetCarByIdQuery(Guid CardId) : IRequest<CarDto?>;

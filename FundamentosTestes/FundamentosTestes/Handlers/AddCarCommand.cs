@@ -1,6 +1,6 @@
-﻿using FudamentosTestes.Dtos;
+﻿using FundamentosTestes.Dtos;
 using MediatR;
 
-namespace FudamentosTestes.Handlers;
+namespace FundamentosTestes.Handlers;
 
 internal record AddCarCommand(string Nome) : IRequest<CarDto>;

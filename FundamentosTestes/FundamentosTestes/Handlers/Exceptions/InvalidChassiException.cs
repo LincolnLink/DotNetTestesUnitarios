@@ -1,4 +1,4 @@
-﻿namespace FudamentosTestes.Handlers.Exceptions;
+﻿namespace FundamentosTestes.Handlers.Exceptions;
 
 internal sealed class InvalidChassiException : Exception
 {

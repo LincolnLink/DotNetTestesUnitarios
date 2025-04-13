@@ -1,11 +1,16 @@
+using FundamentosTestes.Controllers;
+using FundamentosTestes.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+//builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDependencies();
 
 var app = builder.Build();
 
@@ -18,8 +23,14 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+// Mapeando EndPoints
+app.MapCarsController();
 
-app.MapControllers();
+// Iniciando DB
+app.InitializeDb();
+
+//app.UseAuthorization();
+
+//app.MapControllers();
 
 app.Run();

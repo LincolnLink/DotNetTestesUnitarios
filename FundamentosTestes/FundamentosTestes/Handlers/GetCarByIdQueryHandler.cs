@@ -1,10 +1,9 @@
-﻿using FudamentosTestes.Db;
-using FudamentosTestes.Dtos;
+﻿using FundamentosTestes.Dtos;
 using FundamentosTestes.Db;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace FudamentosTestes.Handlers;
+namespace FundamentosTestes.Handlers;
 
 internal sealed class GetCarByIdQueryHandler(AppDbContext dbContext) : IRequestHandler<GetCarByIdQuery, CarDto?>
 {
@@ -13,4 +12,9 @@ internal sealed class GetCarByIdQueryHandler(AppDbContext dbContext) : IRequestH
         var car = await dbContext.Cars.SingleOrDefaultAsync(x => x.Id == request.CardId, cancellationToken: cancellationToken);
         return car is null ? null : new CarDto(car.Id, car.Name);
     }
+
+    //public Task<CarDto?> Handle(GetCarByIdQuery request, CancellationToken cancellationToken)
+    //{
+    //    throw new NotImplementedException();
+    //}
 }

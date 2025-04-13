@@ -1,13 +1,11 @@
-﻿using FudamentosTestes.Db;
-using FudamentosTestes.Dtos;
-using FudamentosTestes.Entities;
-using FudamentosTestes.Handlers.Exceptions;
-using FudamentosTestes.Services;
-using FundamentosTestes.Db;
+﻿using FundamentosTestes.Db;
+using FundamentosTestes.Dtos;
 using FundamentosTestes.Entities;
+using FundamentosTestes.Handlers.Exceptions;
+using FundamentosTestes.Services;
 using MediatR;
 
-namespace FudamentosTestes.Handlers;
+namespace FundamentosTestes.Handlers;
 
 internal class AddCarCommandHandler(ICarChassiValidatorService carChassiValidatorService, AppDbContext appDbContext)
     : IRequestHandler<AddCarCommand, CarDto>
