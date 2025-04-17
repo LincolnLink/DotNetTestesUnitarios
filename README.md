@@ -1,4 +1,4 @@
-# DotNetTestesUnitarios
+# DotNetTestesUnitarios + CQRS + MediatR
 
  - Você deve deixar as interface publica e as classes de implementação internal.
 
@@ -45,4 +45,6 @@
 
   - NSubstitute, pega a interface e moka a implementação.
 
-  - pesquisae sobre : record (depois)
+  - record: nova forma de criar objeto.
+
+  - Teste de integração: api usa um teste em memoria.(pesquisar)
