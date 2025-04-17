@@ -29,4 +29,20 @@
 
  ```
 
-  - Trait , Uma biblioteca que serve para descrever uma categoria de teste
+  - Trait , Uma biblioteca que serve para descrever uma categoria de teste.
+
+  - Stryker, teste de mutação.
+
+  - Um teste não pode depender do outro é unitario.
+
+  - O construtor executa a cada teste.
+
+  - construtor é executado a cada teste.
+
+  - as interface devem ser mokadas para fazer um teste em metodo que depende de interface, não moka implementações.
+
+  - Classes devem depender de interfaces e abstrações, e não de implementações.
+
+  - NSubstitute, pega a interface e moka a implementação.
+
+  - pesquisae sobre : record (depois)
